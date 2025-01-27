@@ -99,6 +99,11 @@ app.post('/api/v1/register', async (req, res) => {
     });
 });
 
+app.post('/api/v1/contact', async (req, res) => {
+  console.log(req.body);
+  res.json({ isSuccess: true, message: '保存成功' });
+});
+
 app.post('/api/v1/user-update', async (req, res) => {
   console.log(req.body);
   // fetch関数で渡したデータをオブジェクトリテラルとして自動で変換してくれているので
